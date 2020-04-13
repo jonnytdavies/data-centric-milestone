@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+
 <h1>Domesticated Animals</h1>
 <div class="row">
 	{% for animal in animals %}
@@ -8,10 +9,25 @@
 			<div class="card-image">
 				<img src="{{animal.animal_image}}">
 				<span class="card-title">{{animal.animal_name}}</span>
-				<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+				<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">edit</i></a>
 			</div>
 			<div class="card-content">
-				<p>{{animal.diet}} - {{animal.habitat}}</p>
+				<table>
+					<thead>
+						<tr>
+							<th>Diet</th>
+							<th>Habitat</th>
+							<th>Group</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{animal.diet}}</td>
+							<td>{{animal.habitat}}</td>
+							<td>{{animal.group_name}}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
