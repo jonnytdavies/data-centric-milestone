@@ -31,6 +31,28 @@ def insert_animal():
     return redirect(url_for('get_animals'))
 
 
+@app.route('/update_animal/<animal_id>')
+def edit_animal(animal_id):
+    the_animal = mongo.db.animals.find_one({"_id": ObjectId(animal_id)})
+    all_groups = mongo.db.group.find()
+    return render_template('editanimal.html', animal=the_animal, group=all_groups)
+
+
+@app.route('/update_animal/<animal_id>', methods=['POST'])
+def update_animal(animal_id):
+    animals = mongo.db.animals
+    animals.update({'_id': ObjectId(animal_id)},
+                   {
+        'animal_name': request.form.get('animal_name'),
+        'child_name': request.form.get('child_name'),
+        'group_name': request.form.get('group_name'),
+        'diet': request.form.get('diet'),
+        'habitat': request.form.get('habitat'),
+        'animal_image': request.form.get('animal_image')
+    })
+    return redirect(url_for('get_animals'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(
         os.environ.get('PORT')), debug=True)
