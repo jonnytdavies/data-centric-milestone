@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3>Add Animal</h3>
+<div class="row">
+	<form action="{{ url_for('insert_animal') }}" method="POST" class="col s12">
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="material-icons prefix">account_circle</i>
+				<input id="animal_name" name="animal_name" type="text" class="validate">
+				<label for="icon_prefix">Animal Name</label>
+			</div>
+			<div class="input-field col s12">
+				<i class="material-icons prefix">child_friendly</i>
+				<input id="child_name" name="child_name" type="text" class="validate">
+				<label for="icon_telephone">Offspring Name</label>
+			</div>
+			<div class="input-field col s12">
+				<i class="material-icons prefix">pie_chart</i>
+				<select id="group_name" name="group_name">
+                    <option value="" disabled selected>Choose Animal Group</option>
+                    {% for group in group %}
+                    <option value="{{group.group_name}}">{{group.group_name}}</option>
+                    {% endfor %}
+                </select>
+				<label>Animal Group</label>
+			</div>
+			<div class="input-field col s12">
+				<i class="material-icons prefix">restaurant</i>
+				<input id="diet" name="diet" type="text" class="validate">
+				<label for="icon_telephone">Diet</label>
+			</div>
+			<div class="input-field col s12">
+				<i class="material-icons prefix">home</i>
+				<input id="habitat" name="habitat" type="text" class="validate">
+				<label for="icon_prefix">Living</label>
+			</div>
+			<div class="input-field col s12">
+				<i class="material-icons prefix">add_photo_alternate</i>
+				<input id="animal_image" name="animal_image" type="text" class="validate">
+				<label for="icon_prefix">Animal Image Link</label>
+			</div>
+		</div>
+		<div class="row">
+			<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">post_add</i>
+            </button>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
