@@ -1,8 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
-.card-title {
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #80C051; 
+}
+
+/* Padding */
+
+main {
+    padding-top: 70px;
+}
+
+.button-padding {
+    padding: 20px;
+}
+
+
+/* Navbar Styles */
+nav {
+    background-color: #80C051;
+    position: fixed;
+    z-index:3;
+}
+
+.nav-button, .add-button {
+    background-color: #9C232B;
+    
+}
+
+nav, .page-title, .card-title, .add-button {
     text-shadow: 2px 2px 1px #000!important;
+    color: #fff;
+}
+
+/* Card styling */
+
+.card {
+    background-color: #fff;
+    border-radius:15px
 }
 
 .shifted-left-btn {
     right: 75px!important;
+}
+
+
+/* Form styling */
+
+form {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
 }

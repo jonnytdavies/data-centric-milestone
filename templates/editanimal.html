@@ -1,6 +1,6 @@
 {% extends 'base.html' %} {% block content %}
 
-<h3>Edit Animal</h3>
+<h2 class="page-title">Edit Animal</h2>
 <div class="row">
 	<form action="{{ url_for('update_animal', animal_id=animal._id) }}" method="POST" class="col s12">
 		<div class="row">
@@ -44,8 +44,8 @@
 				<label for="icon_prefix">Animal Image Link</label>
 			</div>
 		</div>
-		<div class="row">
-			<button class="btn waves-effect waves-light" type="submit" name="action">Update Animal
+		<div class="row button-padding">
+			<button class="btn waves-effect waves-light add-button" type="submit" name="action">Update Animal
                 <i class="material-icons right">post_add</i>
             </button>
 		</div>
