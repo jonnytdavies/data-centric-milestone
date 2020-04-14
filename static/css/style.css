@@ -33,6 +33,17 @@ nav, .page-title, .card-title, .add-button {
     color: #fff;
 }
 
+/* Icon color override - wasn't changing Icon color to white in side-nav */
+
+i {
+    color:#fff!important
+}
+
+/* Position Override to fix bug where mobile menu wasn't reachable when Desktop nav is fixed */
+#sidenav-overlay {
+    position: relative!important;
+}
+
 /* Card styling */
 
 .card {
@@ -51,4 +62,10 @@ form {
     background-color: white;
     border-radius: 15px;
     padding: 20px;
+}
+
+/* Button styling */
+
+.btn:hover, .nav-button:hover {
+    background-color: #5f0e0e!important; /* Made important because it wasn't styling the buttons in the side-nav */
 }
