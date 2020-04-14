@@ -15,6 +15,13 @@ main {
     padding: 20px;
 }
 
+/* Site description Styling */
+
+.site-description {
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+}
+
 
 /* Navbar Styles */
 nav {
