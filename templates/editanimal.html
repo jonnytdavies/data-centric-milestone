@@ -2,6 +2,9 @@
 
 <h2 class="page-title">Edit Animal</h2>
 <div class="row">
+	<!--Form for users to edit the information about an animal already in the database.
+    The form will first look for fields already populated by data and display it to the user
+    In the respective fields-->
 	<form action="{{ url_for('update_animal', animal_id=animal._id) }}" method="POST" class="col s12">
 		<div class="row">
 			<div class="input-field col s12">
@@ -19,7 +22,7 @@
 				<select id="group" name="group_name">
                     <option value="" disabled selected>Choose Animal Group</option>
                     {% for group in group %}
-                    {% if group.group_name == animal.group_name %}
+                    {% if group.group_name == animal.group_name %} <!--If statement to check if a group has already been selected-->
                     <option value="{{group.group_name}}" selected > {{group.group_name}}</option>
                     {% else %}
                     <option value="{{group.group_name}}">{{group.group_name}}</option>
@@ -44,6 +47,7 @@
 				<label for="icon_prefix">Animal Image Link</label>
 			</div>
 		</div>
+		<!--Button to submit edited data and return the user to the animals page, so that they can see their new changes have rendered-->
 		<div class="row button-padding">
 			<button class="btn waves-effect waves-light add-button" type="submit" name="action">Update Animal
                 <i class="material-icons right">post_add</i>

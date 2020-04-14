@@ -1,15 +1,16 @@
 {% extends 'base.html' %} {% block content %}
 <div>
 	<h3 class="page-title">Welcome to Animal Farm!</h3>
+    <!--Description of the website purpose and how a user can contribute to the growth of the site and data.-->
     <p class="site-description">Here you will find a list of animals that have been domesticated, whether that be as pets or for farming.
     <br><br>
     Feel free to add any animals that you think are missing from the list, and edit or delete any that you think are either inaccurate or don't belong.
     </p>
 </div>
 <div class="row">
-	{% for animal in animals %}
+	{% for animal in animals %} <!--For loop to iterate through all the data in the animals collection-->
 	<div class="col s12 m6">
-		<div class="card">
+		<div class="card"> <!--Display a card for each animal in the datebase. Each with an image and buttons to edit or delete-->
 			<div class="card-image">
 				<img src="{{animal.animal_image}}">
 				<span class="card-title"><strong>{{animal.animal_name}}</strong></span>
@@ -28,7 +29,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr> <!--Fetch data from mongoDB Animals collection-->
 							<td>{{animal.diet}}</td>
 							<td>{{animal.habitat}}</td>
 							<td>{{animal.group_name}}</td>

@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
-	<title>Animals</title>
+	<title>Animal Farm</title>
 </head>
 
 <body>
@@ -20,7 +20,7 @@
 				<a href="{{url_for('get_animals')}}" class="brand-logo center">Animal Farm</a>
 				<a href="{{url_for('get_animals')}}" data-activates="mobile-demo"
 					class="button-collapse"><i class="material-icons">menu</i></a>
-
+				<!--Desktop Navbar-->
 				<ul id="nav-mobile" class="right hide-on-med-and-down">
 					<li><a href="{{url_for('get_animals')}}" class="waves-effect waves-light btn nav-button">Home</a>
 					</li>
@@ -28,6 +28,7 @@
 							class="waves-effect waves-light btn nav-button"><i class="material-icons right">post_add</i>Add
 							Animal</a></li>
 				</ul>
+                <!--Mobile Navbar - slides out from the left when burger icon is clicked/tapped-->
 				<ul class="side-nav" id="mobile-demo">
 					<li><a href="{{url_for('get_animals')}}" class="waves-effect waves-light btn nav-button">Home</a>
 					</li>
@@ -39,13 +40,13 @@
 		</nav>
 	</header>
 	<main>
+    <!--Main website content-->
 		<div class="container">
 			{% block content %}
 			{% endblock %}
 		</div>
 	</main>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"
-		integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 	<script>
 		$(document).ready(function() {

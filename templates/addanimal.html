@@ -2,6 +2,7 @@
 
 <h2 class="page-title">Add Animal</h2>
 <div class="row">
+	<!--Form for users to add information about a new animal to the database.-->
 	<form action="{{ url_for('insert_animal') }}" method="POST" class="col s12">
 		<div class="row">
 			<div class="input-field col s12">
@@ -40,6 +41,7 @@
 				<label for="icon_prefix">Animal Image Link</label>
 			</div>
 		</div>
+		<!--Button to submit new animal data and return the user to the animals page, so that they can see their new data has been successfully added-->
 		<div class="row button-padding">
 			<button class="btn waves-effect waves-light add-button" type="submit" name="action">Add Animal
                 <i class="material-icons right">post_add</i>
