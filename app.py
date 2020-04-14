@@ -53,6 +53,12 @@ def update_animal(animal_id):
     return redirect(url_for('get_animals'))
 
 
+@app.route('/delete_animal/<animal_id>')
+def delete_animal(animal_id):
+    mongo.db.animals.remove({'_id': ObjectId(animal_id)})
+    return redirect(url_for('get_animals'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(
         os.environ.get('PORT')), debug=True)

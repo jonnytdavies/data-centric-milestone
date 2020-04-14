@@ -2,3 +2,7 @@
 .card-title {
     text-shadow: 2px 2px 1px #000!important;
 }
+
+.shifted-left-btn {
+    right: 75px!important;
+}
