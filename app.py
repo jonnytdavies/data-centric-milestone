@@ -35,7 +35,8 @@ def insert_animal():
 def edit_animal(animal_id):
     the_animal = mongo.db.animals.find_one({"_id": ObjectId(animal_id)})
     all_groups = mongo.db.group.find()
-    return render_template('editanimal.html', animal=the_animal, group=all_groups)
+    return render_template('editanimal.html',
+                           animal=the_animal, group=all_groups)
 
 
 @app.route('/update_animal/<animal_id>', methods=['POST'])

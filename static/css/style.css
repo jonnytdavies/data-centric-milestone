@@ -43,7 +43,7 @@ nav, .page-title, .card-title, .add-button {
 
 /* Icon color override - wasn't changing Icon color to white in side-nav */
 
-i {
+.side-nav i {
     color:#fff!important
 }
 
