@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,11 @@
 
 	<title>Animal Farm</title>
 </head>
+
 <body>
 	<header>
-		<nav>   <!--This is a materialize navbar-->
+		<nav>
+			<!--This is a materialize navbar-->
 			<div class="nav-wrapper">
 				<a href="{{url_for('get_animals')}}" class="brand-logo center">Animal Farm</a>
 				<a href="{{url_for('get_animals')}}" data-activates="mobile-demo"
@@ -26,7 +29,7 @@
 							class="waves-effect waves-light btn nav-button"><i class="material-icons right">post_add</i>Add
 							Animal</a></li>
 				</ul>
-                <!--Mobile Navbar - slides out from the left when burger icon is clicked/tapped-->
+				<!--Mobile Navbar - slides out from the left when burger icon is clicked/tapped-->
 				<ul class="side-nav" id="mobile-demo">
 					<li><a href="{{url_for('get_animals')}}" class="waves-effect waves-light btn nav-button">Home</a>
 					</li>
@@ -38,7 +41,7 @@
 		</nav>
 	</header>
 	<main>
-    <!--Main website content-->
+		<!--Main website content-->
 		<div class="container">
 			{% block content %}
 			{% endblock %}
