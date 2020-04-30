@@ -8,7 +8,7 @@ The benefit of this is that a user can come to the website, find out what animal
 
 Another advantage is that the website can be constantly updated, so the users can combine their knowledge to constantly update and improve the quality of the information.
 ### UX
-Wireframes can be found [here]()
+Wireframes can be found [here](https://github.com/jonnytdavies/data-centric-milestone/tree/master/wireframes)
 
 This website is built mainly for people who are involved in or are interested in farming or owning a domesticated animal as a pet. The website intends to inform a user of simple information about domesticated animals, to give them some knowledge of what is required to take care of the animal, such as where it should live and what it should eat.
 
