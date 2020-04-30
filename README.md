@@ -1,4 +1,5 @@
 # Animal Farm - Code Institute Milestone Project 4
+A deployed version of this site can be found [here](https://pet-list-db.herokuapp.com/)
 
 ## Animal Farm - Domesticated Animals Database
 The inspiration for this project came from living on a farm. The overall concept of the website was to have a place where people can go to to see simple information about different animals, with a focus being animals that have been domesticated. 
@@ -165,7 +166,9 @@ For more details on how to deploy a site to Heroku see this [video](https://www.
 Credits
 
 Content
+
 The information about each animal is currently my own, but the pictures have come from Google Images.
 
 Media
+
 The images for my site have come from links to images found on Google Images. I do not own the rights to any of them. No images are stored on the website, and are hosted solely from the location of the link.
